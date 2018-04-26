@@ -2,6 +2,7 @@
 include("php4store/Endpoint.php");
 //on instancie l’objet
 $myEndpoint = new Endpoint('http://dbpedia.org/');
+$myEndpointbis = new Endpoint('http://fr.dbpedia.org/');
 //on fabrique la requête SPARQL
 $prefix = 'PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -14,6 +15,8 @@ PREFIX dbpedia2: <http://dbpedia.org/property/>
 PREFIX dbpedia: <http://dbpedia.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia-fr: <http://fr.dbpedia.org/resource/>
+PREFIX prop-fr: <http://fr.dbpedia.org/property/>
 ';
 
 
@@ -100,47 +103,48 @@ function getCountry(){
 }
 }
 function nomPerso(){
-    global $myEndpoint,$prefix;
-    $rq="select distinct ?elem where { ?a prop-fr:oeuvre dbpedia-fr:Harry_Potter. ?a foaf:name ?elem.}
-        }";
+    global $myEndpointbis,$prefix;
+    $rq="select distinct ?perso where { ?a prop-fr:oeuvre dbpedia-fr:Harry_Potter. ?a foaf:name ?perso.
+    }";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
-    $rows = $myEndpoint->query($sparql, 'rows'); 
+    $rows = $myEndpointbis->query($sparql, 'rows'); 
     //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
-    $err = $myEndpoint->getErrors();
+    $err = $myEndpointbis->getErrors();
     if ($err) { die (print_r($err,true));}				
     //On scanne le résultat 
     return $rows;
 }
 
 function desSerie(){
-    global $myEndpoint,$prefix;
+    global $myEndpointbis,$prefix;
     $rq="select ?desc where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/abstract> ?desc FILTER (LANG(?desc)='fr')}
         ";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
-    $rows = $myEndpoint->query($sparql, 'rows'); 
+    $rows = $myEndpointbis->query($sparql, 'rows'); 
     //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
-    $err = $myEndpoint->getErrors();
+    $err = $myEndpointbis->getErrors();
     if ($err) { die (print_r($err,true));}				
     //On scanne le résultat 
     foreach($rows as $row){
+
         return $row["desc"];
     
-}
+    }
 }
 
 function harryImg(){
-    global $myEndpoint,$prefix;
+    global $myEndpointbis,$prefix;
     $rq="select ?img where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/thumbnail> ?img}
         ";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
-    $rows = $myEndpoint->query($sparql, 'rows'); 
+    $rows = $myEndpointbis->query($sparql, 'rows'); 
     //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
-    $err = $myEndpoint->getErrors();
+    $err = $myEndpointbis->getErrors();
     if ($err) { die (print_r($err,true));}				
     //On scanne le résultat 
     foreach($rows as $row){
@@ -149,7 +153,7 @@ function harryImg(){
 }
 
 function editeurLivresDes(){
-    global $myEndpoint,$prefix;
+    global $myEndpointbis,$prefix;
     $rq="select ?descpubli where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/firstPublisher> ?publi.
         ?publi <http://dbpedia.org/ontology/abstract> ?descpubli.
@@ -157,16 +161,18 @@ function editeurLivresDes(){
         ";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
-    $rows = $myEndpoint->query($sparql, 'rows'); 
+    $rows = $myEndpointbis->query($sparql, 'rows'); 
     //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
-    $err = $myEndpoint->getErrors();
+    $err = $myEndpointbis->getErrors();
     if ($err) { die (print_r($err,true));}				
     //On scanne le résultat 
-    return $rows;
+    foreach($rows as $row){
+        return $row["descpubli"];
+}
 }
 
 function langLivres(){
-    global $myEndpoint,$prefix;
+    global $myEndpointbis,$prefix;
     $rq="select ?langue where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/language> ?llangue.
         ?llangue rdfs:label ?langue.
@@ -174,11 +180,13 @@ function langLivres(){
         ";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
-    $rows = $myEndpoint->query($sparql, 'rows'); 
+    $rows = $myEndpointbis->query($sparql, 'rows'); 
     //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
-    $err = $myEndpoint->getErrors();
+    $err = $myEndpointbis->getErrors();
     if ($err) { die (print_r($err,true));}				
     //On scanne le résultat 
-    return $rows;
+    foreach($rows as $row){
+        return $row["langue"];
+}
 }
 ?>
