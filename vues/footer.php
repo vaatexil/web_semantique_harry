@@ -3,7 +3,7 @@
 <script type="text/javascript" src="/libsjs/bootstrap.min.js"></script>
 
 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
-if(strpos($actual_link,"Harry")!=false){
+if(strpos($actual_link,"harry")!=false){
   echo '<script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-fQXLsusCmGgBknatKfcmxXzrB9WOfRE&callback=initMap">
   </script>
@@ -14,9 +14,6 @@ else{
 
 }
 ?>
-
-
-
 
 </body>
 </html>

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" media="all"  href="/styles/client/annonces.css">
 	<link rel="stylesheet" href="/libscss/hover.css">
 </head>
-<body style="text-align:center;">
+<body >
 	<div class="col-lg-1"></div>
 	<section class="main-container col-xs-10 col-lg-offset-1">
 		<header style="position:relative" class="main-container-header col-xs-12">
