@@ -1,0 +1,226 @@
+@import './main.css';
+
+.nav-container {
+	height: 100%;
+	background-color: #191e23;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.nav-main-unselected{
+	width:100%;
+	height:70px;
+	border-bottom: solid 1px #13171b;
+}
+.nav-main-unselected >p{
+	top: 50%; /* poussé de la moitié de hauteur du référent */
+	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+	color:grey;
+}
+@keyframes greytoblue {
+    0%   {background-color: #191e23}
+    100% {background-color: #3bb4bc;}
+}
+/* The element to apply the animation to */
+
+.nav-main-unselected:hover p{
+color:black;
+}
+.nav-main-unselected:hover{
+	animation-name: greytoblue;
+    animation-duration: 0.7s;
+	background-color: #3bb4bc;
+	cursor:pointer;
+}
+
+.nav-main-selected >p{
+	top: 50%; /* poussé de la moitié de hauteur du référent */
+	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+	color:black;
+}
+.nav-main-selected{
+	width:100%;
+	height:70px;
+	border-bottom: solid 1px #13171b;
+	background-color:#3bb4bc;
+}
+.nav-main{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-container .nav-header {
+	height: 130px;
+	background-color: #0e1214;
+	border-top: solid 8px #3bb4bc;
+}
+
+.nav-container  {
+	margin-top: 40px;
+}
+
+.nav-container .nav-main form {
+
+}
+.nav-container .nav-main button {
+	display: block;
+}
+.main-container {
+	height: 100%;
+	background-color: #0e1214;
+	padding: 0 !important;
+	margin: 0 !important;
+
+}
+.main-container-header {
+	height: 50px;
+	background-color: #0e1214;
+}
+
+.offer-container {
+	height: calc(100%-50px);
+}
+
+.white {
+	color: white;
+}
+.blue {
+	color: #3bb4bc;
+}
+ .offer-desc-title, .offer-resume-title, .offer-profile-title, .offer-about-title {
+	font-size: 24px;
+	color: #3bb4bc;
+
+}
+.offer-title{
+	font-size:35px;
+		color: #3bb4bc;
+}
+.offer-header-id {
+	font-size: 15px;
+	color: #3bb4bc;
+}
+
+.offer-header-separator {
+	height: 2px;
+	background-color: #3bb4bc;
+
+}
+
+.offer-time-remaining {
+	font-size: 15px;
+	color: #3bb4bc;
+	text-align: right;
+}
+
+.offer-desc-content {
+	font-size: 16px;
+}
+
+.offer-resume-content {
+	font-size: 20px;
+	color: #3bb4bc;
+}
+
+
+.offer-main-right {
+	text-align: right;
+}
+
+.offer-profile-items {
+	font-size: 16px;
+}
+
+.thumbnail{
+	background-color:rgba(0,0,0,0);
+	border: none;
+}
+.thumbnail img{
+	border: solid 3px #3bb4bc
+}
+.caption h3{
+	color:white;
+	margin-top:5px;
+}
+.main-container-header > div {
+	height:100%;
+}
+.main-container-header > div > span{
+	color:white;
+	font-size:18px;
+	top:25%;
+}
+.main-container-header {
+	height: 50px;
+	background-color: #0e1214;
+}
+.modal-content{
+background-color:#0e1314;
+border: solid 2px #3bb4bc;
+color:#ecf0f1;
+}
+.modal-dialog{
+	width:1000px;
+	top:20%;
+}
+.modal-title{
+	color:#ecf0f1;
+	text-align:center;
+	font-size:25px;
+}
+.modal-header{
+		border-bottom: solid 1px #3bb4bc;
+}
+.modal-footer{
+	border-top:none;
+}
+.input-group-addon{
+	display:inline-block;
+	height:40px;
+	font-size:25px;
+	margin-top:-3px;
+}
+.form-control{
+	display:inline-block;
+	width:380px;
+	height:40px;
+	color:#ecf0f1;
+}
+.input-group-addon{
+	height:40px;
+	width:50px;
+}
+.form-group input{
+	background-color:black;
+}
+
+.form-group span{
+	background-color:#3bb4bc;
+
+}
+.fa{
+	color:#000000;
+	font-size:22px;
+}
+.btn-block{
+	width:20%;
+	right: 15px;
+	bottom: 10px;
+	position: absolute;
+}
+textarea{
+	background-color:black!important;
+	height:160px!important;
+}
+.btn-blocked{
+	width:80%;
+	left:10%;
+}
+.nav-footer{
+	position:absolute;
+	color:white;
+	bottom:0;
+}
+.nav-container{
+	text-align:center;
+}

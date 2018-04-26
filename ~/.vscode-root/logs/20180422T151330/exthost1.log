@@ -1,0 +1,14 @@
+[2018-04-22 15:13:36.919] [exthost1] [info] extension host started
+[2018-04-22 15:13:36.937] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-04-22 15:13:36.937] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2018-04-22 15:13:37.032] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-04-22 15:13:37.032] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2018-04-22 15:13:37.188] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-04-22 15:13:37.188] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-04-22 15:13:37.216] [exthost1] [info] eager extensions activated
+[2018-04-22 15:13:37.219] [exthost1] [info] ExtensionService#_doActivateExtension vscode.php {"startup":false,"activationEvent":"onLanguage:php"}
+[2018-04-22 15:13:37.219] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/php/out/phpMain
+[2018-04-22 15:55:42.243] [exthost1] [info] ExtensionService#_doActivateExtension patrys.vscode-code-outline {"startup":false,"activationEvent":"onView:symbolOutline"}
+[2018-04-22 15:55:42.243] [exthost1] [info] ExtensionService#loadCommonJSModule /root/.vscode/extensions/patrys.vscode-code-outline-0.0.13/out/src/extension
+[2018-04-22 16:12:31.338] [exthost1] [info] ExtensionService#_doActivateExtension vscode.css {"startup":false,"activationEvent":"onLanguage:css"}
+[2018-04-22 16:12:31.338] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css/client/out/cssMain

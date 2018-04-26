@@ -1,0 +1,33 @@
+@import'/styles/fonts.css';
+@import '/styles/commons.css';
+
+.nav-header #smoky{
+	font-size:25px;
+	top:30px;
+	animation:none;
+	transform:
+	  scale(1.05);
+	text-shadow: 0 0 20px #3bb4bc;
+	opacity: 1;
+  	color:#ecf0f1;
+}
+.nav-header:hover #smoky{
+	animation-name:fuzzy;
+	animation:fuzzy 80s;
+}
+@keyframes fuzzy {
+  0% {
+	  transform:
+		scale(1.05);
+	  text-shadow: 0 0 20px #3bb4bc;
+	  opacity: 1;
+  }
+  1%{
+	  transform:
+		scale(1.2);
+	  text-shadow: 0 0 100px #3bb4bc;
+	  opacity: 0;
+}
+100%{
+}
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>arc2</name>
+ <channel>bordercloud.github.com/pear</channel>
+ <summary>ARC RDF Classes for PHP</summary>
+ <description>ARC RDF Classes for PHP</description>
+ <lead>
+  <name>Karima Rafes</name>
+  <user>karima</user>
+  <email>karima.rafes@bordercloud.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-08-19</date>
+ <time>01:33:09</time>
+ <version>
+  <release>1.0.4</release>
+  <api>1.0.4</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>MIT</license>
+ <notes>
+This is the latest stable release of arc2.
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="43ba37b5874e508fe4b53cf2fab7f01a" name="arc2/ARC2.php" role="php" />
+   <file baseinstalldir="/" md5sum="adb067e58b2f4e4c94039ac6211da2a8" name="arc2/ARC2_Class.php" role="php" />
+   <file baseinstalldir="/" md5sum="c328230eec430fdf993c162001e9b3cf" name="arc2/ARC2_getFormat.php" role="php" />
+   <file baseinstalldir="/" md5sum="2f11040a5622f634e24ae1514059114d" name="arc2/ARC2_getPreferredFormat.php" role="php" />
+   <file baseinstalldir="/" md5sum="5f50fc99e29f2cfc8407e47f20382bce" name="arc2/ARC2_Reader.php" role="php" />
+   <file baseinstalldir="/" md5sum="a283c0aff412aa3c8fbcac6e8a36c370" name="arc2/ARC2_Resource.php" role="php" />
+   <file baseinstalldir="/" md5sum="96ce01533db4b50ea8390f2afe607c5d" name="arc2/ARC2_TestHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="24aa45f38c72019b1a922c49d465fa09" name="arc2/etc/VERSION.TXT" role="data" />
+   <file baseinstalldir="/" md5sum="7daad996f6cca346f67a098d5bf8f69d" name="arc2/extractors/ARC2_DcExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="f672153a89947013c7bdabf8cf617acf" name="arc2/extractors/ARC2_ErdfExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="83a2ea595dcc774b5d7971b3521e2638" name="arc2/extractors/ARC2_MicroformatsExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="d54bb95ba9fd04e9bfa5b56fb8a343da" name="arc2/extractors/ARC2_OpenidExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="67dc887cb309177214ca59675777ffe8" name="arc2/extractors/ARC2_PoshRdfExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="5af74da999d2ea1bb21f7daa94a2cae2" name="arc2/extractors/ARC2_RdfaExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="7b3f735c56b6f557dcca7178ba660e00" name="arc2/extractors/ARC2_RDFExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="540d86dd96eef77de43c87d448928590" name="arc2/extractors/ARC2_TwitterProfilePicExtractor.php" role="php" />
+   <file baseinstalldir="/" md5sum="cd9e2e1361e0f4cf5ac81c8f33b678dd" name="arc2/parsers/ARC2_AtomParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="d3b40934f7769717de98c2971cd4f8a2" name="arc2/parsers/ARC2_CBJSONParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="fa0e773d2f97832c3f926f5d80e72578" name="arc2/parsers/ARC2_JSONParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="d704971444333ea54a67180264519d97" name="arc2/parsers/ARC2_LegacyXMLParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="4a3a737af9b52835ab3dd04dbbd2fce4" name="arc2/parsers/ARC2_RDFParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="f1d5b3cde1ec708ed71fa81dca71e4b2" name="arc2/parsers/ARC2_RDFXMLParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="d9e80e61f0e66350ebc508a409a4aade" name="arc2/parsers/ARC2_RSSParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="f71910499e0e6d433a5562a1edc419aa" name="arc2/parsers/ARC2_SemHTMLParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="2897160308d2eb6816de30945d040ab7" name="arc2/parsers/ARC2_SGAJSONParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="5c44bce2417aec2a0a37919c9dfebe9a" name="arc2/parsers/ARC2_SPARQLParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="31d82736b1fad08fe46eb09daff2415f" name="arc2/parsers/ARC2_SPARQLPlusParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="e64d7b14b7b45cf03aa527fb59946e26" name="arc2/parsers/ARC2_SPARQLXMLResultParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="fdee91891b3f836e3d1ba84f115ec81f" name="arc2/parsers/ARC2_SPOGParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="764a95054df97b4333033d4eceb726bb" name="arc2/parsers/ARC2_TurtleParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="d4fcd829021278e2bee4a82463a82ae0" name="arc2/serializers/ARC2_LegacyHTMLSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="c264b7967a9ac7bd942bdc73a13566b7" name="arc2/serializers/ARC2_LegacyJSONSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="1e4488c06069bac45efa9cdddc032c3d" name="arc2/serializers/ARC2_LegacyXMLSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="caad1b27e3d2afbb83a1f9b43d860f6d" name="arc2/serializers/ARC2_MicroRDFSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="2e0fd4702fa9317d5226042f1c260aca" name="arc2/serializers/ARC2_NTriplesSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="a9022f149cbaa788f33e31731b4a96ae" name="arc2/serializers/ARC2_POSHRDFSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="78b94745ee146f9e5b09fb79ba8f977e" name="arc2/serializers/ARC2_RDFJSONSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="c20bd12bfe8cd57c48d76de36439fd6f" name="arc2/serializers/ARC2_RDFSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="3f533b73a3d314e9b758a490ea91117a" name="arc2/serializers/ARC2_RDFXMLSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="30b9bca5dbb460c22e441d3280d80fee" name="arc2/serializers/ARC2_RSS10Serializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="b5460c5b268705ce4c6529b73a8b4620" name="arc2/serializers/ARC2_TurtleSerializer.php" role="php" />
+   <file baseinstalldir="/" md5sum="0ac26ab265a773bafbe5e55d71afb541" name="arc2/sparqlscript/ARC2_SPARQLScriptParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="8ddd1fb62649206e6ae3581326a15fe8" name="arc2/sparqlscript/ARC2_SPARQLScriptProcessor.php" role="php" />
+   <file baseinstalldir="/" md5sum="4248f5a2b1ebf388fd83f1aa459a23c2" name="arc2/store/ARC2_MemStore.php" role="php" />
+   <file baseinstalldir="/" md5sum="7066b087a3b0e36f82cb367050b7f6b7" name="arc2/store/ARC2_RemoteStore.php" role="php" />
+   <file baseinstalldir="/" md5sum="a4c45b924e748d150f17c01cec6c2477" name="arc2/store/ARC2_Store.php" role="php" />
+   <file baseinstalldir="/" md5sum="c4922907acbbe23cce94a2feeefa4738" name="arc2/store/ARC2_StoreAskQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="33a700ff0a51e49c61f430efd965b3e2" name="arc2/store/ARC2_StoreAtomLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="9180eb012610b61acb7e5274d62cc97b" name="arc2/store/ARC2_StoreCBJSONLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="e3951f050df913296ca5ab41c4fe16b4" name="arc2/store/ARC2_StoreConstructQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="f79f5611ede88a5de9f04a1615e0516b" name="arc2/store/ARC2_StoreDeleteQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="6e802f3dd046431ca7b8ccf1c0fbe947" name="arc2/store/ARC2_StoreDescribeQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="a5c55d4bb9050c8529f351ab20cfa870" name="arc2/store/ARC2_StoreDumper.php" role="php" />
+   <file baseinstalldir="/" md5sum="095e40946bc6412071d7b2d30da9307e" name="arc2/store/ARC2_StoreDumpQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="4683b62b5c8f9e15bc3a598c36860c19" name="arc2/store/ARC2_StoreEndpoint.php" role="php" />
+   <file baseinstalldir="/" md5sum="210100c6b54b7edb8baae45de7aa2829" name="arc2/store/ARC2_StoreHelper.php" role="php" />
+   <file baseinstalldir="/" md5sum="7708aa517751ef0f481958299683289c" name="arc2/store/ARC2_StoreInsertQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="589681d4eb067fa2c64a93e722d54820" name="arc2/store/ARC2_StoreLoadQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="7b19a03f642511b0715c5b1a905d06bb" name="arc2/store/ARC2_StoreQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="3780ebd04f60cb4a3fc85be743242eb0" name="arc2/store/ARC2_StoreRDFXMLLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="a24b5dda212dee854ad5bdc00d5130d6" name="arc2/store/ARC2_StoreRSSLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="ef6b3e0929fdbee096c989ec9890e8f3" name="arc2/store/ARC2_StoreSelectQueryHandler.php" role="php" />
+   <file baseinstalldir="/" md5sum="1bb7d7c134522fa2a9dbc01192314a02" name="arc2/store/ARC2_StoreSemHTMLLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="a89f826df83c8707eca9bc1354a53445" name="arc2/store/ARC2_StoreSGAJSONLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="cd70d0598de95a7b8eb85c0fc9e83b80" name="arc2/store/ARC2_StoreSPOGLoader.php" role="php" />
+   <file baseinstalldir="/" md5sum="453ad38e5a875dd51b7632d24d7397f5" name="arc2/store/ARC2_StoreTableManager.php" role="php" />
+   <file baseinstalldir="/" md5sum="dcbddb8f1be71b8a8c9cd99bb4f608b8" name="arc2/store/ARC2_StoreTurtleLoader.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.9.4</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.4</release>
+    <api>1.0.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-08-19</date>
+   <license>MIT</license>
+   <notes>
+This is the latest stable release of arc2.
+   </notes>
+  </release>
+ </changelog>
+</package>

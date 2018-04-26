@@ -1,0 +1,33 @@
+* {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 1000px;
+}
+#buttonDisc {
+	border-radius: 0;
+	right:0px;
+	border: solid 4px #1f555a;
+	position:absolute;
+}
+.regular {
+	font-family: "Brandon regular", serif;
+}
+
+.medium {
+	font-family: "Brandon medium", serif;
+}
+
+.bold {
+	font-family: "Brandon bold", serif;
+}
+
+.blue {
+	color: #3bb4bc;
+}
+.white {
+	color: white;
+}
