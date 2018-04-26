@@ -6,14 +6,45 @@
 				<h3 id="textCode"></h3>
 			</main>
 		</section>
+
+<aside style="height:400px" class="main-container-banner col-xs-12">
+	<main class="main-container-banner-content col-xs-12">
+		<header class="main-container-banner-content-header col-xs-12">
+			<h1> Description de la série  </h1>
+		</header>
+		<main>
+			<p class="col-xs-12"><?= desSerie(); ?> </p>
+		</main>
+		<div class='offer-text col-xs-12'>
+			<div class='offer-text col-xs-8'>
+			<h1>
+			Personnages présents dans les livres : 	
+			</h1>
+			<ul style="color:white;margin-left:20px;">
+				<?php 
+				$rows = nomPerso();
+				$nb=0;
+				foreach($rows as $row){
+					echo "<li>".$row["perso"]."</li>";
+				}
+				?>
+			</div>
+			<br><br><br><br>
+			<img class="col-xs-4" style="width:15%" src="<?= harryImg(); ?>" alt="\">
+		</div>
+	</main>
+	
+
+</aside>
+
 <aside class="main-container-banner col-xs-12">
 	<main class="main-container-banner-content col-xs-12">
 		<header class="main-container-banner-content-header col-xs-12">
 			<h1> Auteur </h1>
 		</header>
 		<main>
-			<p class="col-xs-8"><?= descriptionAuteur(); ?> </p>
-			<img class="col-xs-4"  src="<?= captionAuteur(); ?>" alt="\">
+			<p class="col-xs-9"><?= descriptionAuteur(); ?> </p>
+			<img class="col-xs-3" style="width:15%" src="<?= captionAuteur(); ?>" alt="\">
 		</main>
 
 	</main>
@@ -45,6 +76,20 @@
 				echo "<div class='hid' style='display:none'>".$row["des"]."</div>";
 			}
 			?>
+	</div>
+	<div class ='offer-text col-xs-12'>
+			<h3 class ='col-xs-12' >La langue utilisée pour écrire ces livres est :     <?= langLivres(); ?> </h3>
+	</div>
+</div>
+
+<div style="height:200px;color:white" class='offer-container col-xs-12'>
+	<div class='offer-text col-xs-12'>
+		<h1>
+		Informations sur l'éditeur : 	
+		</h1>
+		<main>
+			<p class="col-xs-12"><?=editeurLivresDes();?> </p>
+		</main>
 	</div>
 </div>
 
