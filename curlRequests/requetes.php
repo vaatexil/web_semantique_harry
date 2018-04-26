@@ -99,4 +99,86 @@ function getCountry(){
     return $row["country"];
 }
 }
+function nomPerso(){
+    global $myEndpoint,$prefix;
+    $rq="select distinct ?elem where { ?a prop-fr:oeuvre dbpedia-fr:Harry_Potter. ?a foaf:name ?elem.}
+        }";
+    $sparql = $prefix.$rq;
+    //On utilise la fonction pour faire une requête en lecture
+    $rows = $myEndpoint->query($sparql, 'rows'); 
+    //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
+    $err = $myEndpoint->getErrors();
+    if ($err) { die (print_r($err,true));}				
+    //On scanne le résultat 
+    return $rows;
+}
+
+function desSerie(){
+    global $myEndpoint,$prefix;
+    $rq="select ?desc where {<http://fr.dbpedia.org/resource/Harry_Potter>
+        <http://dbpedia.org/ontology/abstract> ?desc FILTER (LANG(?desc)='fr')}
+        ";
+    $sparql = $prefix.$rq;
+    //On utilise la fonction pour faire une requête en lecture
+    $rows = $myEndpoint->query($sparql, 'rows'); 
+    //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
+    $err = $myEndpoint->getErrors();
+    if ($err) { die (print_r($err,true));}				
+    //On scanne le résultat 
+    foreach($rows as $row){
+        return $row["desc"];
+    
+}
+}
+
+function harryImg(){
+    global $myEndpoint,$prefix;
+    $rq="select ?img where {<http://fr.dbpedia.org/resource/Harry_Potter>
+        <http://dbpedia.org/ontology/thumbnail> ?img}
+        ";
+    $sparql = $prefix.$rq;
+    //On utilise la fonction pour faire une requête en lecture
+    $rows = $myEndpoint->query($sparql, 'rows'); 
+    //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
+    $err = $myEndpoint->getErrors();
+    if ($err) { die (print_r($err,true));}				
+    //On scanne le résultat 
+    foreach($rows as $row){
+        return $row["img"];
+}
+}
+
+function editeurLivresDes(){
+    global $myEndpoint,$prefix;
+    $rq="select ?descpubli where {<http://fr.dbpedia.org/resource/Harry_Potter>
+        <http://dbpedia.org/ontology/firstPublisher> ?publi.
+        ?publi <http://dbpedia.org/ontology/abstract> ?descpubli.
+        FILTER (lang(?descpubli) = 'fr')}
+        ";
+    $sparql = $prefix.$rq;
+    //On utilise la fonction pour faire une requête en lecture
+    $rows = $myEndpoint->query($sparql, 'rows'); 
+    //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
+    $err = $myEndpoint->getErrors();
+    if ($err) { die (print_r($err,true));}				
+    //On scanne le résultat 
+    return $rows;
+}
+
+function langLivres(){
+    global $myEndpoint,$prefix;
+    $rq="select ?langue where {<http://fr.dbpedia.org/resource/Harry_Potter>
+        <http://dbpedia.org/ontology/language> ?llangue.
+        ?llangue rdfs:label ?langue.
+        FILTER (lang(?langue) = 'fr').}
+        ";
+    $sparql = $prefix.$rq;
+    //On utilise la fonction pour faire une requête en lecture
+    $rows = $myEndpoint->query($sparql, 'rows'); 
+    //On vérifie qu’il n'y a pas d'erreur sinon on stoppe le programme et on affiche les erreurs
+    $err = $myEndpoint->getErrors();
+    if ($err) { die (print_r($err,true));}				
+    //On scanne le résultat 
+    return $rows;
+}
 ?>
