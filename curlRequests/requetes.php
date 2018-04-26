@@ -101,7 +101,7 @@ function getCountry(){
 }
 function nomPerso(){
     global $myEndpoint,$prefix;
-    $rq="select distinct ?elem where { ?a prop-fr:oeuvre dbpedia-fr:Harry_Potter. ?a foaf:name ?elem.}
+    $rq="SELECT distinct ?elem where { ?a prop-fr:oeuvre dbpedia-fr:Harry_Potter. ?a foaf:name ?elem.}
         }";
     $sparql = $prefix.$rq;
     //On utilise la fonction pour faire une requête en lecture
@@ -115,7 +115,7 @@ function nomPerso(){
 
 function desSerie(){
     global $myEndpoint,$prefix;
-    $rq="select ?desc where {<http://fr.dbpedia.org/resource/Harry_Potter>
+    $rq="SELECT ?desc where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/abstract> ?desc FILTER (LANG(?desc)='fr')}
         ";
     $sparql = $prefix.$rq;
@@ -133,7 +133,7 @@ function desSerie(){
 
 function harryImg(){
     global $myEndpoint,$prefix;
-    $rq="select ?img where {<http://fr.dbpedia.org/resource/Harry_Potter>
+    $rq="SELECT ?img where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/thumbnail> ?img}
         ";
     $sparql = $prefix.$rq;
@@ -150,7 +150,7 @@ function harryImg(){
 
 function editeurLivresDes(){
     global $myEndpoint,$prefix;
-    $rq="select ?descpubli where {<http://fr.dbpedia.org/resource/Harry_Potter>
+    $rq="SELECT ?descpubli where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/firstPublisher> ?publi.
         ?publi <http://dbpedia.org/ontology/abstract> ?descpubli.
         FILTER (lang(?descpubli) = 'fr')}
@@ -167,7 +167,7 @@ function editeurLivresDes(){
 
 function langLivres(){
     global $myEndpoint,$prefix;
-    $rq="select ?langue where {<http://fr.dbpedia.org/resource/Harry_Potter>
+    $rq="SELECT ?langue where {<http://fr.dbpedia.org/resource/Harry_Potter>
         <http://dbpedia.org/ontology/language> ?llangue.
         ?llangue rdfs:label ?langue.
         FILTER (lang(?langue) = 'fr').}
