@@ -1,3 +1,4 @@
+
 function initMap(add) {
     var geocoder;
     var map;
@@ -51,3 +52,11 @@ function initMap(add) {
         });
       });
       }
+// function harry potter livres description
+function fc(xd){
+document.getElementById("content").innerHTML=document.getElementsByClassName("hid")[xd].innerHTML;
+}
+  var el=document.getElementsByClassName("click");
+  for(var x=0;x<el.length;x++){
+    el[x].addEventListener("click",fc.bind(this,x),false);
+  }
